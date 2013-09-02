@@ -30,7 +30,7 @@ function artesis_frontend_search_pages_default_page_manager_handlers() {
     'relationships' => array(),
     'panels_breadcrumbs_state' => 1,
     'panels_breadcrumbs_titles' => 'Search
-E-ressources',
+E-articles',
     'panels_breadcrumbs_paths' => '<none>
 <none>',
     'panels_breadcrumbs_home' => 1,
