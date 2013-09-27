@@ -1233,6 +1233,31 @@ return TRUE;
     $pane->locks = array();
     $display->content['new-36'] = $pane;
     $display->panels['right'][1] = 'new-36';
+    $pane = new stdClass();
+    $pane->pid = 'new-37';
+    $pane->panel = 'right';
+    $pane->type = 'node_links';
+    $pane->subtype = 'node_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'build_mode' => 'full',
+      'identifier' => '',
+      'link' => 1,
+      'context' => 'argument_entity_id:node_1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-37'] = $pane;
+    $display->panels['right'][2] = 'new-37';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-35';
   $handler->conf['display'] = $display;
