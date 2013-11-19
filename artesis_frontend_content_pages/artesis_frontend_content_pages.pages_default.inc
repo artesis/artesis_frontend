@@ -1233,6 +1233,33 @@ return TRUE;
     $pane->locks = array();
     $display->content['new-36'] = $pane;
     $display->panels['right'][1] = 'new-36';
+    $pane = new stdClass();
+    $pane->pid = 'new-37';
+    $pane->panel = 'right';
+    $pane->type = 'ding_related_items';
+    $pane->subtype = 'ding_related_items';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'item_list_custom_title' => 'Related materials',
+      'context' => 'argument_entity_id:node_1',
+    );
+    $pane->cache = array(
+      'method' => 'simple',
+      'settings' => array(
+        'lifetime' => 28800,
+        'granularity' => 'none',
+      ),
+    );
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-37'] = $pane;
+    $display->panels['right'][2] = 'new-37';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-35';
   $handler->conf['display'] = $display;
