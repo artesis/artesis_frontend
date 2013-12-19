@@ -1245,10 +1245,15 @@ return TRUE;
       'context' => 'argument_entity_id:node_1',
     );
     $pane->cache = array(
-      'method' => 'simple',
+      'method' => 'rules',
       'settings' => array(
-        'lifetime' => 28800,
-        'granularity' => 'none',
+        'granularity' => 'context',
+        'language' => 1,
+        'language_content' => 1,
+        'advanced' => array(),
+        'cache_key' => '52b2be47922dd',
+        'substitute' => 0,
+        'new' => TRUE,
       ),
     );
     $pane->style = array(
