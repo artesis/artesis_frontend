@@ -1185,6 +1185,31 @@ return TRUE;
     $pane = new stdClass();
     $pane->pid = 'new-35';
     $pane->panel = 'right';
+    $pane->type = 'node_links';
+    $pane->subtype = 'node_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'build_mode' => 'full',
+      'identifier' => '',
+      'link' => 1,
+      'context' => 'argument_entity_id:node_1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-35'] = $pane;
+    $display->panels['right'][0] = 'new-35';
+    $pane = new stdClass();
+    $pane->pid = 'new-36';
+    $pane->panel = 'right';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
     $pane->shown = TRUE;
@@ -1201,19 +1226,19 @@ return TRUE;
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-35'] = $pane;
-    $display->panels['right'][0] = 'new-35';
+    $display->content['new-36'] = $pane;
+    $display->panels['right'][1] = 'new-36';
     $pane = new stdClass();
-    $pane->pid = 'new-36';
+    $pane->pid = 'new-37';
     $pane->panel = 'right';
     $pane->type = 'node_content';
     $pane->subtype = 'node_content';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'links' => 1,
+      'links' => 0,
       'no_extras' => 0,
       'override_title' => 1,
       'override_title_text' => '',
@@ -1229,12 +1254,12 @@ return TRUE;
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-36'] = $pane;
-    $display->panels['right'][1] = 'new-36';
+    $display->content['new-37'] = $pane;
+    $display->panels['right'][2] = 'new-37';
     $pane = new stdClass();
-    $pane->pid = 'new-37';
+    $pane->pid = 'new-38';
     $pane->panel = 'right';
     $pane->type = 'ding_related_items';
     $pane->subtype = 'ding_related_items';
@@ -1261,12 +1286,12 @@ return TRUE;
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-37'] = $pane;
-    $display->panels['right'][2] = 'new-37';
+    $display->content['new-38'] = $pane;
+    $display->panels['right'][3] = 'new-38';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-35';
+  $display->title_pane = 'new-36';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_8'] = $handler;
 
