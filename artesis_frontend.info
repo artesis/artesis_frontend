@@ -210,4 +210,5 @@ features[variable][] = date_format_day_month_year
 features[variable][] = extlink_target
 features[variable][] = image_jpeg_quality
 features[variable][] = theme_alpha_basetheme_settings
+features[variable][] = og_node_access_strict
 features[views_view][] = parent_vocabulary_terms

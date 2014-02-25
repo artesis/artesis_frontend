@@ -417,5 +417,9 @@ function artesis_frontend_strongarm() {
   );
   $export['theme_alpha_basetheme_settings'] = $strongarm;
 
+  $strongarm->name = 'og_node_access_strict';
+  $strongarm->value = 0;
+  $export['og_node_access_strict'] = $strongarm;
+
   return $export;
 }
