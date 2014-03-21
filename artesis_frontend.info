@@ -183,6 +183,7 @@ features[user_permission][] = edit terms in 8
 features[user_permission][] = export relation types
 features[user_permission][] = manage features
 features[user_permission][] = manage item viewer
+features[user_permission][] = nodelist cache settings
 features[user_permission][] = notify of path changes
 features[user_permission][] = opt-in or out of tracking
 features[user_permission][] = override ding_page premium option
