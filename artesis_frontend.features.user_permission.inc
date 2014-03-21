@@ -1130,6 +1130,16 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'ding_item_viewer',
   );
 
+  // Exported permission: nodelist cache settings.
+  $permissions['nodelist cache settings'] = array(
+    'name' => 'nodelist cache settings',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'local administrator',
+    ),
+    'module' => 'ding_nodelist',
+  );
+
   // Exported permission: notify of path changes.
   $permissions['notify of path changes'] = array(
     'name' => 'notify of path changes',
