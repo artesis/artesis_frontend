@@ -119,7 +119,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'links' => 0,
-      'no_extras' => 0,
+      'no_extras' => 1,
       'override_title' => 1,
       'override_title_text' => '',
       'identifier' => '',
@@ -495,7 +495,7 @@ return TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'links' => 0,
-      'no_extras' => 0,
+      'no_extras' => 1,
       'override_title' => 1,
       'override_title_text' => '',
       'identifier' => '',
@@ -1104,15 +1104,15 @@ return TRUE;
     'relationships' => array(),
     'access' => array(
       'plugins' => array(
-        0 => array(
+        1 => array(
           'name' => 'node_type',
           'settings' => array(
             'type' => array(
-              'ding_campaign' => 'ding_campaign',
+              'ding_page' => 'ding_page',
             ),
           ),
           'context' => 'argument_entity_id:node_1',
-          'not' => TRUE,
+          'not' => FALSE,
         ),
       ),
       'logic' => 'and',
@@ -1185,6 +1185,31 @@ return TRUE;
     $pane = new stdClass();
     $pane->pid = 'new-35';
     $pane->panel = 'right';
+    $pane->type = 'node_links';
+    $pane->subtype = 'node_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'build_mode' => 'full',
+      'identifier' => '',
+      'link' => 1,
+      'context' => 'argument_entity_id:node_1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-35'] = $pane;
+    $display->panels['right'][0] = 'new-35';
+    $pane = new stdClass();
+    $pane->pid = 'new-36';
+    $pane->panel = 'right';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
     $pane->shown = TRUE;
@@ -1201,12 +1226,12 @@ return TRUE;
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-35'] = $pane;
-    $display->panels['right'][0] = 'new-35';
+    $display->content['new-36'] = $pane;
+    $display->panels['right'][1] = 'new-36';
     $pane = new stdClass();
-    $pane->pid = 'new-36';
+    $pane->pid = 'new-37';
     $pane->panel = 'right';
     $pane->type = 'node_content';
     $pane->subtype = 'node_content';
@@ -1231,23 +1256,30 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-36'] = $pane;
-    $display->panels['right'][1] = 'new-36';
+    $display->content['new-37'] = $pane;
+    $display->panels['right'][2] = 'new-37';
     $pane = new stdClass();
-    $pane->pid = 'new-37';
+    $pane->pid = 'new-38';
     $pane->panel = 'right';
     $pane->type = 'ding_related_items';
     $pane->subtype = 'ding_related_items';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'item_list_custom_title' => 'Related materials',
       'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
     );
     $pane->cache = array(
-      'method' => '0',
-      'settings' => array(),
+      'method' => 'rules',
+      'settings' => array(
+        'granularity' => 'context',
+        'language' => 1,
+        'language_content' => 1,
+        'advanced' => array(),
+        'cache_key' => '52b2be47922dd',
+        'substitute' => 0,
+        'new' => TRUE,
+      ),
     );
     $pane->style = array(
       'settings' => NULL,
@@ -1256,10 +1288,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-37'] = $pane;
-    $display->panels['right'][2] = 'new-37';
+    $display->content['new-38'] = $pane;
+    $display->panels['right'][3] = 'new-38';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-35';
+  $display->title_pane = 'new-36';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_8'] = $handler;
 
