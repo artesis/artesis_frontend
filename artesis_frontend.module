@@ -101,6 +101,13 @@ function artesis_frontend_form_alter(&$form, &$forms_state, $form_id) {
       );
     }
   }
+  elseif (module_exists('ding_wayf') && ($form_id == 'user_login_block' || $form_id == 'user_login')) {
+    $form['actions']['wayf'] = array(
+      '#type' => 'button',
+      '#attributes' => array('class' => array('wayf-login')),
+      '#value' => l(t('Login using WAYF'), 'wayf/login', array('query' => drupal_get_destination())),
+    );
+  }
 }
 
 /**
