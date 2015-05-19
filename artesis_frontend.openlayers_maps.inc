@@ -75,8 +75,8 @@ function artesis_frontend_openlayers_maps() {
       'openlayers_geojson_picture_this' => 0,
       'ding_library_openlayers_1' => 0,
     ),
-    'projection' => '900913',
-    'displayProjection' => '4326',
+    'projection' => 'EPSG:900913',
+    'displayProjection' => 'EPSG:4326',
     'styles' => array(
       'default' => 'default',
       'select' => 'default',
