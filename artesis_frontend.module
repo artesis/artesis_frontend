@@ -101,7 +101,7 @@ function artesis_frontend_form_alter(&$form, &$forms_state, $form_id) {
       );
     }
   }
-  elseif (module_exists('ding_wayf') && ($form_id == 'user_login_block' || $form_id == 'user_login')) {
+  elseif (module_exists('ding_wayf') && ($form_id == 'user_login_block' || $form_id == 'user_login') && domain_check_machine_name('artesis')) {
     $block = module_invoke('ding_wayf', 'block_view');
 
     $form['actions']['wayf'] = array(
