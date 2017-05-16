@@ -72,6 +72,7 @@ function artesis_user_roles($membersonly = FALSE, $permission = NULL, $account =
  * Permit users to create only roles that do not exceed theirs
  */
 function artesis_frontend_form_alter(&$form, &$forms_state, $form_id) {
+  global $_domain;
   if ($form_id == 'user_profile_form' || $form_id == 'user_register_form') {
     $form['account']['roles']['#access'] = user_access('change user role');
 
@@ -101,7 +102,7 @@ function artesis_frontend_form_alter(&$form, &$forms_state, $form_id) {
       );
     }
   }
-  elseif (module_exists('ding_wayf') && ($form_id == 'user_login_block' || $form_id == 'user_login')) {
+  elseif (module_exists('ding_wayf') && ($form_id == 'user_login_block' || $form_id == 'user_login') && $_domain['machine_name'] == 'artesis') {
     $block = module_invoke('ding_wayf', 'block_view');
 
     $form['actions']['wayf'] = array(
