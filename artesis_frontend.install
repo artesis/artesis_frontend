@@ -81,3 +81,13 @@ function artesis_frontend_update_7000() {
   $status['taxonomy_term'] = FALSE;
   variable_set('views_defaults', $status);
 }
+
+/**
+ * Enable 'user-scalability' theme setting.
+ */
+function artesis_frontend_update_7001(&$sandbox) {
+  $alpha_base_settings = variable_get('theme_alpha_basetheme_settings', []);
+
+  $alpha_base_settings['alpha_viewport_user_scaleable'] = 1;
+  variable_set('theme_alpha_basetheme_settings', $alpha_base_settings);
+}
