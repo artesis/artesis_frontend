@@ -81,3 +81,29 @@ function artesis_frontend_update_7000() {
   $status['taxonomy_term'] = FALSE;
   variable_set('views_defaults', $status);
 }
+
+/**
+ * Enable 'user-scalability' theme setting.
+ */
+function artesis_frontend_update_7001(&$sandbox) {
+  $alpha_base_settings = variable_get('theme_alpha_basetheme_settings', []);
+  $alpha_base_settings['alpha_viewport_user_scaleable'] = (int) 1;
+  variable_set('theme_alpha_basetheme_settings', $alpha_base_settings);
+
+  $domains = domain_domains();
+
+  foreach ($domains as $domain) {
+    $theme = domain_theme_lookup($domain['domain_id']);
+    $settings = domain_unserialize($theme['settings']);
+    $settings['alpha_viewport_user_scaleable'] = (int) 1;
+
+    db_update('domain_theme')
+      ->fields(['settings' => serialize($settings)])
+      ->condition('domain_id', $domain['domain_id'])
+      ->condition('status', 1)
+      ->execute();
+  }
+
+  cache_clear_all();
+  drupal_theme_rebuild();
+}

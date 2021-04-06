@@ -57,7 +57,7 @@ function artesis_frontend_strongarm() {
     'alpha_viewport_initial_scale' => '1',
     'alpha_viewport_min_scale' => '1',
     'alpha_viewport_max_scale' => '1',
-    'alpha_viewport_user_scaleable' => 0,
+    'alpha_viewport_user_scaleable' => 1,
     'alpha_primary_alpha_default' => 'normal',
     'alpha_layouts_alpha_default_narrow_responsive' => 1,
     'alpha_layouts_alpha_default_narrow_weight' => '1',
