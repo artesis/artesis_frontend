@@ -27,7 +27,6 @@ dependencies[] = googleanalytics
 dependencies[] = i18n_string
 dependencies[] = locale
 dependencies[] = menu
-dependencies[] = mkdru
 dependencies[] = nopremium
 dependencies[] = opening_hours
 dependencies[] = openlayers_ui
