@@ -366,3 +366,24 @@ function artesis_frontend_block_view($delta = '') {
 
   return $block;
 }
+
+/**
+ * Implements hook_html_head_alter().
+ */
+function artesis_frontend_html_head_alter(&$head_elements) {
+  global $base_url;
+
+  // We know that staging instances have URLs like "<client>-stg.artesis.dk",
+  // so we will check for matching this pattern and add robots meta tag.
+  if (preg_match('/stg.artesis/', $base_url) !== 0) {
+    $noindex_meta_tag = [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'robots',
+        'content' => 'noindex, nofollow',
+      ],
+      '#type' => 'html_tag',
+    ];
+    $head_elements['staging_no_index'] = $noindex_meta_tag;
+  }
+}
